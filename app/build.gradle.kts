@@ -3,6 +3,13 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.dagger.hilt.android")
+    id("com.apollographql.apollo3")
+}
+
+apollo {
+    service("service") {
+        packageName.set("dev.bmesquita")
+    }
 }
 
 android {
@@ -62,7 +69,7 @@ dependencies {
     implementation("androidx.compose.ui:ui-tooling-preview")
     implementation("androidx.compose.material3:material3")
 
-    implementation("com.apollographql.apollo3:apollo-runtime:3.7.3")
+    implementation("com.apollographql.apollo3:apollo-runtime:3.8.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.1")
 
     kapt("androidx.hilt:hilt-compiler:1.0.0")
